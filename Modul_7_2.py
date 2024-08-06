@@ -1,6 +1,5 @@
 def custom_write(file_name, strings):
     num_of_str = 1
-    position = 0
     string_positions = {}
     file = open(file_name, 'w', encoding='utf-8')
     for i in strings:
