@@ -6,14 +6,14 @@ class WordsFinder:
 
     def get_all_words(self):
         all_words = {}
-        punktuations = [',', '.', '=', '!', '?', ';', ':', ' - ']
+        punctuations = [',', '.', '=', '!', '?', ';', ':', ' - ']
         for i in self.file_names:
             with open(i, encoding='utf-8') as file:
                 words_in_file = []
                 for line in file:
                     str_ = line.lower()
                     for j in str_:
-                        if j in punktuations:
+                        if j in punctuations:
                             str_ = str_.replace(j, '')
                         list_of_words = str_.split()
                     for k in list_of_words:
